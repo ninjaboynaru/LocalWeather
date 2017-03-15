@@ -1,0 +1,62 @@
+body {
+	background-color:#DFDFDF;
+	color:black;
+	
+	margin:0;
+	text-align:center;
+	font-family:sans-serif;
+	font-weight:lighter;
+	font-size:2.5em;
+}
+
+#Box {
+	background-color:white;
+	margin: 1.2% 30% 1.2% 30%;
+	padding-top: 0.15%;
+	border-radius:2%;
+}
+
+#TabBox {
+	color:white;
+	background-color:#00B6BE;
+	cursor:pointer;
+	
+	font-weight:bold;
+	font-size:1.5em;
+	border-radius:2%;
+	padding: 5% 0 5% 0;
+	margin:0 15% 0 15%;
+}
+#TabBox * {
+	display:inline;
+	margin-right:15%;
+}
+
+#Other p {
+	display:inline;
+	font-weight:bold;
+	font-size:0.5em;
+}
+
+hr.Divider {
+	display:inline-block;
+	vertical-align:middle;
+	width:1px;
+	height:50px;
+}
+
+#Credits {
+	font-size:0.3em;
+	font-weight:bold;
+	font-style:italic;
+}
+
+
+
+
+
+
+
+
+
+
