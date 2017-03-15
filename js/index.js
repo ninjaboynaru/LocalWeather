@@ -18,10 +18,10 @@ function GetWeatherData(position)
 	$.getJSON(urlPart1 + urlPart2, SetWeatherUI);
 }
 
-SetWeatherUI(weatherData)
+function SetWeatherUI(weatherData)
 {
 	var location = weatherData.name + "," + weatherData.sys.country;
-	var temp = Math.round(weatherData.main.emp) + "°F";
+	var temp = Math.round(weatherData.main.temp) + "°F";
 	var description = ToTitleCase(weatherData.weather[0].description);
 	var humidity = weatherData.main.humidity;
 	var wind = Math.round(weatherData.wind.speed);
@@ -43,7 +43,7 @@ SetWeatherUI(weatherData)
 
 
 
-SetWeatherIcon(weatherData)
+function SetWeatherIcon(weatherData)
 {
 	function IconData(className, idMin, idMax, idExtra)
 	{
@@ -86,10 +86,10 @@ SetWeatherIcon(weatherData)
 	iconUI.className = "wi wi-alien";
 }
 
-ChangeUnitSystem()
+function ChangeUnitSystem()
 {
 	var tempUI = document.getElementById("Temp");
-	var windUI = docoment.getElementById("Wind");
+	var windUI = document.getElementById("Wind");
 	var tempChar = tempUI.textContent[tempUI.textContent.length - 1];
 	
 	if(tempChar === "F")
@@ -101,7 +101,7 @@ ChangeUnitSystem()
 		tempUI.textContent = newTemp + " °C";
 		
 		var newWind = ExtractFirstNum(windUI.textContent);
-		newWInd *= 1.6;
+		newWind *= 1.6;
 		newWind = Math.round(newWind);
 		windUI.textContent = "Wind: " + newWind + "kmh";
 	}
@@ -113,7 +113,7 @@ ChangeUnitSystem()
 		newTemp = Math.round(newTemp);
 		tempUI.textContent = newTemp + " °F";
 		
-		vae newWind = ExtractFirstNum(windUI.textContent);
+		var newWind = ExtractFirstNum(windUI.textContent);
 		newWind /= 1.6;
 		newWind = Math.round(newWind);
 		windUI.textContent = "Wind: " + newWind + "mph";
