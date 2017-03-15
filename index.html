@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Local Weather</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css">
+		<link rel="stylesheet" href="css/style.css">
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="js/index.js">
+	</head>
+
+<body>
+	<div id="Box">
+		<p id="Location"> ---, --- </p>
+		<div id="TabBox" onClick="ChangeUnitSystem()">
+			<i id = "Icon" class="wi wi-alien"></i>
+			<p id = "Temp"> 0 °C </p>
+		</div>
+		
+		<p id = "Description"> Clear </p>
+	
+		<div id="Other">
+			<p id="Humidity" class="RightDivider">Humidity: 0%</p>
+			<hr class="Divider">
+			<p id="Wind" onclick="ChangeUnitSystem()" class="UnitChange">Wind: 0mph</p>
+		</div>
+	</div>
+
+	<div id="Credits">
+		<p>Thiago HPC</p>
+		<p>Icon Art by Lukas Bischoff and Eric Flowers</p>
+	</div>
+</body>
+</html>
+
