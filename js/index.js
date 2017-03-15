@@ -12,7 +12,7 @@ function UpdateWeather()
 
 function GetWeatherData(position)
 {
-	var urlPart1 = "https://api.openweathermap.org/data/2.5/weather?lat=" + position.coords.latitude;
+	var urlPart1 = "http://api.openweathermap.org/data/2.5/weather?lat=" + position.coords.latitude;
 	var urlPart2 = "&lon=" + position.coords.longitude + "&appid=9de5e5c188e423ac7e6bda7f5f1d761a&units=imperial";
 	
 	$.getJSON(urlPart1 + urlPart2, SetWeatherUI);
